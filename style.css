@@ -101,6 +101,27 @@ button {
     }
 }
 
+@media (device-aspect-ratio: 16/8) {
+    #gnome {
+        height: 8vh;
+        width: 8vh;
+    }
+
+    .panel button {
+        height: 18vh;
+        width: 18vh;
+    }
+
+    .main button {
+        height: 25vh;
+        width: 25vh;
+    }
+
+    .main {
+        margin-bottom: 4vw;
+    }
+}
+
 @media (device-aspect-ratio: 5/4) {
     #gnome {
         height: 8vh;
