@@ -1,0 +1,45 @@
+<!DOCTYPE >
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skinner Box</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+	<body>
+        <button id="languageButton">EN</button>
+
+		<div id="mainmenu" class="main">
+            <h1 class="crimsontext">Skinner Box</h1>
+            <button id="speedrunmode">Speedrun <br> Mode</button>
+            <button id="endlessmode">Endless <br> Mode</button>
+		</div>
+
+		<div id="scene1" class="disabled">
+			<div class="main">
+                <h1 id="timerText" class="crimsontext"></h1>
+				<p class="crimsontext">Click!</p>
+				<button id="mainButton">0</button>
+			</div>
+
+			<div class="panel buttons">
+				<div class="subpanel crimsontext">
+					<p id="passiveCost">Cost: 15</p>
+					<button id="passiveUp">Upgrade Income <br> +0</button>
+				</div>
+
+				<div class="subpanel crimsontext">
+					<p id="clickCost">Cost: 20</p>
+					<button id="clickUp">Upgrade Click <br> +1</button>
+				</div>
+			</div>
+		</div>
+
+        <div id="scene2" class="main crimsontext disabled">
+            <h1>Your score:</h1>
+            <p id="finalscore"></p>
+            <button id="reset"><a href="">Main <br> Menu</a></button>
+        </div>
+		<script src="JS/script.js"></script>
+	</body>
+</html>
