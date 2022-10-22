@@ -80,7 +80,8 @@ button {
     text-decoration: none !important;
 }
 
-@media (device-aspect-ratio: 16/9) {
+
+@media (device-aspect-ratio: 683/384) {
     #gnome {
         height: 8vh;
         width: 8vh;
@@ -101,7 +102,7 @@ button {
     }
 }
 
-@media (device-aspect-ratio: 16/8) {
+@media (device-aspect-ratio: 16/9) {
     #gnome {
         height: 8vh;
         width: 8vh;

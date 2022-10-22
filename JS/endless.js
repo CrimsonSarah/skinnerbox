@@ -304,20 +304,24 @@ function ascend() {
     updateText(passiveupgrade, text[language][2] + "<br>" + "+" + passivevalue);
     updateText(passivecosttext, text[language][1] + passivecost);
 
+    document.querySelector(".descentpanel").remove();
     document.querySelector(".ascensionpanel").remove();
     ascensionspawninterval = setInterval("spawnAscension()", 1000);
 }
 
 function descend () {
-    ascensionbonus -= 0.1;
+    if (ascensionbonus > 0.1) {
+        ascensionbonus -= 0.1;
+        passivefees -= 0.01
+        clickfees -= 0.01
+    }
+    
     passivevalue = 0;
-    passivefees -= 0.01
     passivecost = 15;
     clickvalue = Math.ceil(1 * ascensionbonus);
-    clickfees -= 0.01
     clickcost = 20;
     totalscore = 0;
-
+    
     localStorage.setItem("ascensionbonus", ascensionbonus);
     localStorage.setItem("passivevalue", passivevalue);
     localStorage.setItem("passivefees", passivefees);
@@ -334,12 +338,13 @@ function descend () {
     updateText(passiveupgrade, text[language][2] + "<br>" + "+" + passivevalue);
     updateText(passivecosttext, text[language][1] + passivecost);
 
+    document.querySelector(".descentpanel").remove();
     document.querySelector(".ascensionpanel").remove();
     ascensionspawninterval = setInterval("spawnAscension()", 1000);
 } 
 
 function spawnAscension () {
-    if (!document.getElementById("ascensionButton")) {
+    if (!document.getElementById("ascensionButton" && !document.getElementById("descentButton"))) {
         if (totalscore >= 1e5 * ascensionbonus || forcespawn == true) {
             if (ascensionspawninterval) {
                 clearInterval(ascensionspawninterval);
@@ -363,7 +368,7 @@ function spawnAscension () {
 
 
             const newsubpanel2 = document.createElement("div");
-            newsubpanel.className = "subpanel crimsontext descentpanel";
+            newsubpanel2.className = "subpanel crimsontext descentpanel";
             document.querySelector(".buttons").appendChild(newsubpanel2);
 
             descenttext = document.createElement("p")
