@@ -7,6 +7,8 @@ let passivefees;
 let totalscore;
 let clickvalue;
 let clickfees;
+let gnomelost;
+let gnomewin;
 let timermin;
 let timersec;
 
@@ -43,7 +45,7 @@ const clicksound = new Audio("SFX/click.mp3");
 const gnomed = new Audio("SFX/gnomed.mp3");
 
 //textos
-text = [["Upgrade Click", "Cost: ", "Upgrade Income", "Gamble with Gnome", "Cost: EVERYTHING", "Ascend", "Descend"] , ["Melhorar Clique", "Custo: ", "Melhorar Renda", "Apostar com Gnomo", "Custo: TUDO", "Ascender", "Descender"]]
+text = [["Upgrade Click", "Cost: ", "Upgrade Income", "Gamble with Gnome", "Cost: EVERYTHING", "Ascend", "Descend"] , ["Melhorar Clique", "Custo: ", "Melhorar Renda", "Apostar com o Gnomo", "Custo: TUDO", "Ascender", "Descender"]]
 
 
 //RETORNAR VARIÁVEIS DO CACHE
@@ -235,13 +237,19 @@ function upgradePassive() {
 }
 
 function gnomeButtonClick() {
-    if (Math.ceil(Math.random() * 100 * ascensionbonus) >= 79) {
+    let chance = Math.ceil(Math.random() * 10 * ascensionbonus);
+    console.log([(7 + gnomewin - gnomelost), chance]);
+
+    if (chance >= (7 + gnomewin - gnomelost)) {
         clicksound.play();
         totalscore += Math.ceil(totalscore / 3);
+        gnomewin++;
     } else {
         gnomed.play();
         totalscore -= Math.ceil(totalscore / 3);
+        gnomelost++;
     }
+
     updateText(main, totalscore);
 }
 
@@ -410,6 +418,9 @@ function changeLanguage () {
 
 
 //RUNTIME
+
+gnomewin = 0;
+gnomelost = 0;
 
 //caso não tenha um idioma selecionado, seleciona inglês
 if (language == null) {

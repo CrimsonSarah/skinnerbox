@@ -4,7 +4,9 @@
 let passivevalue = 0;
 let clickvalue = 1;
 let totalscore = 0;
+let gnomelost = 0;
 let timermin = 15;
+let gnomewin = 0;
 let timersec = 0;
 
 //custos
@@ -30,7 +32,7 @@ const clickerrorsound = new Audio("SFX/clickerror.mp3");
 let gnomespawninterval;
 
 //textos
-text = [["Upgrade Click", "Cost: ", "Upgrade Income", "Gamble with Gnome", "Cost: EVERYTHING", "Ascend"], ["Melhorar Clique", "Custo: ", "Melhorar Renda", "Apostar com Gnomo", "Custo: TUDO", "Ascender"]];
+text = [["Upgrade Click", "Cost: ", "Upgrade Income", "Gamble with Gnome", "Cost: EVERYTHING", "Ascend"], ["Melhorar Clique", "Custo: ", "Melhorar Renda", "Apostar com o Gnomo", "Custo: TUDO", "Ascender"]];
 
 
 
@@ -130,12 +132,14 @@ function upgradePassive() {
 }
 
 function gnomeButtonClick() {
-    if (Math.ceil(Math.random() * 100) >= 67) {
+    if (Math.ceil(Math.random() * 10 * ascensionbonus) >= (7 + gnomewin - gnomelost)) {
         clicksound.play();
         totalscore += Math.ceil(totalscore / 3);
+        gnomewin++;
     } else {
         gnomed.play();
         totalscore -= Math.ceil(totalscore / 3);
+        gnomelost++;
     }
     updateText(main, totalscore);
 }
