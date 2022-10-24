@@ -292,9 +292,9 @@ function ascend() {
 
     ascensionbonus += 0.01;
     passivevalue = 0;
-    passivecost = 15;
+    passivecost = 10;
     clickvalue = 1 * ascensionbonus;
-    clickcost = 20;
+    clickcost = 15;
     totalscore = 0;
 
     localStorage.setItem("ascensionbonus", ascensionbonus);
@@ -324,9 +324,9 @@ function descend () {
     }
 
     passivevalue = 0;
-    passivecost = 15;
+    passivecost = 10;
     clickvalue = 1 * ascensionbonus;
-    clickcost = 20;
+    clickcost = 15;
     totalscore = 0;
 
     localStorage.setItem("ascensionbonus", ascensionbonus);
