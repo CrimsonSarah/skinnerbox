@@ -352,7 +352,7 @@ function descend () {
 
 function spawnAscension () {
     if (!document.getElementById("ascensionButton")) {
-        if (totalscore >= 1e4 * ascensionbonus || forcespawn == true) {
+        if (totalscore >= 1e5 * ascensionbonus || forcespawn == true) {
             if (ascensionspawninterval) {
                 clearInterval(ascensionspawninterval);
             }
