@@ -2,14 +2,13 @@ body {
     background-color: black;
     font-family: sans-serif;
     font-weight: bold;
-    font-size: 107.5%;
 }
 
 button {
+    border: none;
     font-size: 115%;
     font-weight: bold;
     background-color: crimson;
-    border: 0.5vw solid crimson;
 }
 
 .disabled {
@@ -18,16 +17,16 @@ button {
 
 .main {
     display: flex;
-    flex-flow: column wrap;
+    margin-bottom: 4vw;
     align-items: center;
+    flex-flow: column wrap;
     justify-content: space-evenly;
-    margin-bottom: 10vh;
 }
 
 .main button {
+    width: 25vh;
+    height: 25vh;
     font-size: 130%;
-    width: 60vw;
-    height: 60vw;
 }
 
 .panel {
@@ -38,14 +37,14 @@ button {
 }
 
 .panel button {
-    width: 30vw;
-    height: 30vw;
+    width: 18vh;
+    height: 18vh;
 }
 
 .subpanel {
     display: flex;
-    flex-flow: column wrap;
     align-items: center;
+    flex-flow: column wrap;
 }
 
 .crimsontext {
@@ -53,7 +52,11 @@ button {
 }
 
 #languageButton {
+    width: 5vh;
+    height: 5vh;
+    font-size: 100%;
     position: absolute;
+
 }
 
 #speedrunmode {
@@ -66,9 +69,9 @@ button {
     transition: ease-in-out 3s;
     background-size: cover;
     position: absolute;
-    height: 12vw;
+    height: 8vh;
+    width: 8vh;
     z-index: 2;
-    width: 12vw;
 }
 
 #finalscore {
@@ -80,108 +83,32 @@ button {
     text-decoration: none !important;
 }
 
+@media only screen and (max-width:480px) {
+    body {
+        font-size: 80%;
+    }
 
-@media (device-aspect-ratio: 683/384) {
+    #languageButton {
+        height: 6vw;
+        width: 6vw;
+    }
+
     #gnome {
-        height: 8vh;
-        width: 8vh;
+        height: 11vw;
+        width: 11vw;
     }
 
     .panel button {
-        height: 18vh;
-        width: 18vh;
+        height: 24vw;
+        width: 24vw;
     }
 
     .main button {
-        height: 25vh;
-        width: 25vh;
+        height: 34vw;
+        width: 34vw;
     }
 
     .main {
-        margin-bottom: 4vw;
-    }
-}
-
-@media (device-aspect-ratio: 16/9) {
-    #gnome {
-        height: 8vh;
-        width: 8vh;
-    }
-
-    .panel button {
-        height: 18vh;
-        width: 18vh;
-    }
-
-    .main button {
-        height: 25vh;
-        width: 25vh;
-    }
-
-    .main {
-        margin-bottom: 4vw;
-    }
-}
-
-@media (device-aspect-ratio: 5/4) {
-    #gnome {
-        height: 8vh;
-        width: 8vh;
-    }
-
-    .panel button {
-        height: 18vh;
-        width: 18vh;
-    }
-
-    .main button {
-        height: 25vh;
-        width: 25vh;
-    }
-
-    .main {
-        margin-bottom: 4vw;
-    }
-}
-
-@media (device-aspect-ratio: 4/3) {
-    #gnome {
-        height: 8vh;
-        width: 8vh;
-    }
-
-    .panel button {
-        height: 18vh;
-        width: 18vh;
-    }
-
-    .main button {
-        height: 25vh;
-        width: 25vh;
-    }
-
-    .main {
-        margin-bottom: 4vw;
-    }
-}
-
-@media (device-aspect-ratio: 1/1) {
-    #gnome {
-        height: 8vh;
-        width: 8vh;
-    }
-
-    .panel button {
-        height: 18vh;
-        width: 18vh;
-    }
-
-    .main button {
-        height: 25vh;
-        width: 25vh;
-    }
-
-    .main {
-        margin-bottom: 4vw;
+        margin-bottom: 6vh;
     }
 }

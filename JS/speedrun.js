@@ -141,7 +141,6 @@ function gnomeButtonClick() {
         totalscore -= Math.ceil(totalscore / 3);
         gnomelost++;
     }
-    updateText(main, totalscore);
 }
 
 function gnomeClick() {
