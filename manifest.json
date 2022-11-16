@@ -4,7 +4,7 @@
     "lang": "en",
     "description": "Have your own behavior conditioned to click the button!",
     "start_url": "https://crimsonsarah.github.io/skinnerbox/index.html",
-    "background_color": "#000ff",
+    "background_color": "#000000",
     "theme_color": "#dc143c",
     "dir": "ltr",
     "display": "fullscreen",
