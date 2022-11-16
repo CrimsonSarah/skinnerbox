@@ -1,0 +1,55 @@
+{
+    "short_name": "Skinner Box",
+    "name": "Skinner Box",
+    "lang": "en",
+    "description": "Have your own behavior conditioned to click the button!",
+    "start_url": "https://crimsonsarah.github.io/skinnerbox/",
+    "background_color": "#000ff",
+    "theme_color": "#dc143c",
+    "dir": "ltr",
+    "display": "fullscreen",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "./IMG/placeholder731.png",
+            "type": "image/png",
+            "sizes": "731x731"
+        },
+        {
+            "src": "./IMG/placeholder48.png",
+            "type": "image/png",
+            "sizes": "48x48"
+        },
+        {
+            "src": "./IMG/placeholder72.png",
+            "type": "image/png",
+            "sizes": "72x72"
+        },
+        {
+            "src": "./IMG/placeholder96.png",
+            "type": "image/png",
+            "sizes": "96x96"
+        },
+        {
+            "src": "./IMG/placeholder128.png",
+            "type": "image/png",
+            "sizes": "128x128"
+        },
+        {
+            "src": "./IMG/placeholder192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "./IMG/placeholder384.png",
+            "type": "image/png",
+            "sizes": "384x384"
+        },
+        {
+            "src": "./IMG/placeholder512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "prefer_related_applications": false
+}
