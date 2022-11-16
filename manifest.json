@@ -3,7 +3,7 @@
     "name": "Skinner Box",
     "lang": "en",
     "description": "Have your own behavior conditioned to click the button!",
-    "start_url": "https://crimsonsarah.github.io/skinnerbox/",
+    "start_url": "https://crimsonsarah.github.io/skinnerbox/index.html",
     "background_color": "#000ff",
     "theme_color": "#dc143c",
     "dir": "ltr",
